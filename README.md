@@ -150,14 +150,14 @@ A lo largo del curso, exploraremos los siguientes temas fundamentales:
 
 ### 📈 **Ruta de Aprendizaje**
 
-| #     | **Módulo**                                                      | **Descripción**                         | **Duración** |
-| ----- | --------------------------------------------------------------- | --------------------------------------- | ------------ |
-| **1** | **Diseño de bases de datos** mediante modelado entidad-relación | Diagramas ER y normalización conceptual | 2 semanas    |
-| **2** | **Normalización** para evitar redundancias                      | Formas normales (1FN, 2FN, 3FN)         | 1.5 semanas  |
-| **3** | **Consultas SQL básicas y avanzadas**                           | SELECT, JOINs, subconsultas, funciones  | 3 semanas    |
-| **4** | **Transacciones y control de concurrencia**                     | ACID, bloqueos, niveles de aislamiento  | 1 semana     |
-| **5** | **Optimización de consultas**                                   | Índices, planes de ejecución, tuning    | 1.5 semanas  |
-| **6** | **Diseño de esquemas eficientes**                               | Patrones y anti-patrones de diseño      | 1 semana     |
+| #     | **Módulo**                                                      | **Descripción**                         | 
+| ----- | --------------------------------------------------------------- | --------------------------------------- | 
+| **1** | **Diseño de bases de datos** mediante modelado entidad-relación | Diagramas ER y normalización conceptual |
+| **2** | **Normalización** para evitar redundancias                      | Formas normales (1FN, 2FN, 3FN)         |
+| **3** | **Consultas SQL básicas y avanzadas**                           | SELECT, JOINs, subconsultas, funciones  |
+| **4** | **Transacciones y control de concurrencia**                     | ACID, bloqueos, niveles de aislamiento  |
+| **5** | **Optimización de consultas**                                   | Índices, planes de ejecución, tuning    |
+| **6** | **Diseño de esquemas eficientes**                               | Patrones y anti-patrones de diseño      |
 
 </div>
 
