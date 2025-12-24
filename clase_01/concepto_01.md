@@ -29,10 +29,10 @@ Al finalizar este módulo, serás capaz de:
 
 Representan "cosas" u "objetos" del mundo real sobre los cuales queremos almacenar información.
 
-| Elemento           | Símbolo en draw.io                                                           | Descripción               | Ejemplo                    |
-| ------------------ | ---------------------------------------------------------------------------- | ------------------------- | -------------------------- |
-| **Entidad Fuerte** | ![Rectángulo](https://via.placeholder.com/50x30/4CAF50/FFFFFF?text=E)        | Existe independientemente | `Estudiante`, `Producto`   |
-| **Entidad Débil**  | ![Rectángulo doble](https://via.placeholder.com/50x30/FF9800/FFFFFF?text=ED) | Depende de otra entidad   | `Teléfono` (de `Empleado`) |
+| Elemento           | Descripción               | Ejemplo                    |
+| ------------------ | ------------------------- | -------------------------- |
+| **Entidad Fuerte** | Existe independientemente | `Estudiante`, `Producto`   |
+| **Entidad Débil**  | Depende de otra entidad   | `Teléfono` (de `Empleado`) |
 
 **🔧 En draw.io:** Busca "Entity" en la librería de formas o usa un rectángulo simple.
 
@@ -81,10 +81,10 @@ Define el número máximo de ocurrencias en una relación.
 
 Define el mínimo de ocurrencias.
 
-| Notación  | Símbolo | Significado         |
-| --------- | ------- | ------------------- | ---------------------- |
+| Notación  | Símbolo | Significado         |                        
+| --------- | ------- | ------------------- | 
 | **(0,1)** | `○───`  | Opcional (mínimo 0) |
-| **(1,1)** | `       | ───`                | Obligatorio (mínimo 1) |
+| **(1,1)** | `───`   | Obligatorio (mínimo 1) |
 
 **🎯 Ejemplo completo:** `(0,N)` significa: mínimo 0, máximo muchos.
 
