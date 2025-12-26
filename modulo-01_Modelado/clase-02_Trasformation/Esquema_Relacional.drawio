@@ -1,0 +1,16 @@
+<mxfile host="65bd71144e">
+    <diagram id="qiE7RzGQVpqjKexA6Cor" name="Page-1">
+        <mxGraphModel dx="746" dy="467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="30" width="430" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Lo que haremos ahora es transformar el diagrama anterior, que es ER, a un esquema relacional, o como suele llamarse, ‘diagrama de clases’." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="95" width="290" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
