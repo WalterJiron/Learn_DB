@@ -90,7 +90,7 @@ Define el mínimo de ocurrencias.
 
 ## 🔄 **Convertir de Diagrama ER a Esquema Relacional**
 
-_Nota: esto es muy impostante ya que es lo que mas se hace cuando trabajamos con bases de datos._
+_Nota: Se hablará con más detalle en la siguiente clase._
 
 ### **Reglas de transformación:**
 
@@ -114,7 +114,7 @@ _Nota: esto es muy impostante ya que es lo que mas se hace cuando trabajamos con
 
 ```mermaid
 flowchart TD
-    A[Panel de formas] --> B[Buscar "ER" o "Entity"]
+    A[Panel de formas] --> B[Buscar 'ER' o 'Entity']
     B --> C[Arrastrar formas al lienzo]
     C --> D[Conectar con líneas]
     D --> E[Configurar cardinalidad]
