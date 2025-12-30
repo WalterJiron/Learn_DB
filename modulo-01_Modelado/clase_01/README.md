@@ -3,9 +3,12 @@
 
 ## 📊 **Diagramas Entidad-Relación con draw.io**
 
+<img src="https://img.shields.io/badge/Nivel-Intermedio-blue" alt="Nivel Basico">
+<img src="https://img.shields.io/badge/Enfoque-Transformación Conceptual-orange" alt="Enfoque Entrar al mundo de los diagramas ER">
+
 _Fundamentos del modelado conceptual de bases de datos_
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbG2zjX2d6MG-YM0J0zkb8vILdu3ZGjD7Ywg&s" width="50"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbG2zjX2d6MG-YM0J0zkb8vILdu3ZGjD7Ywg&s" width="70"/>
 
 </div>
 

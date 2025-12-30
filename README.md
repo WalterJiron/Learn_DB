@@ -64,7 +64,6 @@ El **modelo relacional** es el paradigma más utilizado actualmente. Se basa en 
 └─────────────────────────────────────────────────────────┘
 ```
 
-
 | Elemento                 | Símbolo | Descripción                                            | Ejemplo                    |
 | ------------------------ | ------- | ------------------------------------------------------ | -------------------------- |
 | **Tablas (Relaciones)**  | 📊      | Estructuras bidimensionales con filas y columnas       | `Estudiantes`, `Cursos`    |
@@ -111,6 +110,8 @@ El **modelo relacional** es el paradigma más utilizado actualmente. Se basa en 
 
 ### 💻 **Ejemplo Básico de una Tabla Relacional**
 
+_Nota: más adelante miraremos esto a más profundidad._
+
 ```sql
 -- 📋 CREACIÓN DE TABLA 'ESTUDIANTES'
 CREATE TABLE Estudiantes (
@@ -150,8 +151,8 @@ A lo largo del curso, exploraremos los siguientes temas fundamentales:
 
 ### 📈 **Ruta de Aprendizaje**
 
-| #     | **Módulo**                                                      | **Descripción**                         | 
-| ----- | --------------------------------------------------------------- | --------------------------------------- | 
+| #     | **Módulo**                                                      | **Descripción**                         |
+| ----- | --------------------------------------------------------------- | --------------------------------------- |
 | **1** | **Diseño de bases de datos** mediante modelado entidad-relación | Diagramas ER y normalización conceptual |
 | **2** | **Normalización** para evitar redundancias                      | Formas normales (1FN, 2FN, 3FN)         |
 | **3** | **Consultas SQL básicas y avanzadas**                           | SELECT, JOINs, subconsultas, funciones  |
