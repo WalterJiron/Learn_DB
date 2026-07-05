@@ -109,7 +109,7 @@ CREATE TABLE NombreTabla (
 | `UNIQUE`         | No permite valores repetidos                        | `Email NVARCHAR(100) UNIQUE`           |
 | `DEFAULT`        | Asigna un valor si no se proporciona uno            | `Estado BIT DEFAULT 1`                 |
 | `CHECK`          | Valida que el valor cumpla una condición            | `CHECK (Cantidad_Maxima > 0)`          |
-| `FOREIGN KEY`    | Establece relación con otra tabla                   | `ID_Profesor INT FOREIGN KEY REFERENCES Profesor(ID_Profesor) ON DELETE CASCADE ON UPDATE CASCADE` |
+| `FOREIGN KEY`    | Establece relación con otra tabla                   | `ID_Profesor INT FOREIGN KEY REFERENCES Profesor(ID_Profesor)` |
 | `IDENTITY(1,1)`  | Genera números automáticos (1, 2, 3...)             | `ID INT IDENTITY(1,1) PRIMARY KEY`     |
 
 **¿Qué es `IDENTITY(1,1)`?** Le dice a SQL Server que genere los valores de esa columna automáticamente. El primer número es `1` y cada registro nuevo suma `1`. Así no tienes que escribir el ID manualmente.
@@ -166,7 +166,7 @@ CREATE TABLE Curso (
     Nombre           NVARCHAR(100) NOT NULL,
     Descripcion      NVARCHAR(500),
     Cantidad_Maxima  INT           NOT NULL CHECK (Cantidad_Maxima > 0),
-    ID_Profesor      INT           FOREIGN KEY REFERENCES Profesor(ID_Profesor) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL
+    ID_Profesor      INT           FOREIGN KEY REFERENCES Profesor(ID_Profesor) NOT NULL
 );
 ```
 
@@ -184,8 +184,8 @@ CREATE TABLE Curso (
 ```sql
 CREATE TABLE Inscripcion (
     ID                      INT           IDENTITY(1,1) PRIMARY KEY,
-    Matricula_Estudiante    NVARCHAR(20)  FOREIGN KEY REFERENCES Estudiante(Matricula) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
-    Codigo_Curso            NVARCHAR(10)  FOREIGN KEY REFERENCES Curso(Codigo_Curso) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
+    Matricula_Estudiante    NVARCHAR(20)  FOREIGN KEY REFERENCES Estudiante(Matricula) NOT NULL,
+    Codigo_Curso            NVARCHAR(10)  FOREIGN KEY REFERENCES Curso(Codigo_Curso) NOT NULL,
     Fecha_Inscripcion       DATE          NOT NULL DEFAULT GETDATE(),
     Estado                  NVARCHAR(20)  NOT NULL DEFAULT 'Activa'
                             CHECK (Estado IN ('Activa', 'Completada', 'Cancelada')),
@@ -250,15 +250,15 @@ CREATE TABLE Curso (
     Nombre           NVARCHAR(100) NOT NULL,
     Descripcion      NVARCHAR(500),
     Cantidad_Maxima  INT           NOT NULL CHECK (Cantidad_Maxima > 0),
-    ID_Profesor      INT           FOREIGN KEY REFERENCES Profesor(ID_Profesor) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL
+    ID_Profesor      INT           FOREIGN KEY REFERENCES Profesor(ID_Profesor) NOT NULL
 );
 GO
 
 -- 4. Tabla Inscripcion (relación M:N entre Estudiante y Curso)
 CREATE TABLE Inscripcion (
     ID                      INT           IDENTITY(1,1) PRIMARY KEY,
-    Matricula_Estudiante    NVARCHAR(20)  FOREIGN KEY REFERENCES Estudiante(Matricula) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
-    Codigo_Curso            NVARCHAR(10)  FOREIGN KEY REFERENCES Curso(Codigo_Curso) ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
+    Matricula_Estudiante    NVARCHAR(20)  FOREIGN KEY REFERENCES Estudiante(Matricula) NOT NULL,
+    Codigo_Curso            NVARCHAR(10)  FOREIGN KEY REFERENCES Curso(Codigo_Curso) NOT NULL,
     Fecha_Inscripcion       DATE          NOT NULL DEFAULT GETDATE(),
     Estado                  NVARCHAR(20)  NOT NULL DEFAULT 'Activa'
                             CHECK (Estado IN ('Activa', 'Completada', 'Cancelada')),
