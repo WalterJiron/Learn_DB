@@ -279,7 +279,6 @@ DELETE FROM Profesor WHERE ID_Profesor = 1;
 | Acepta WHERE          | Sí                                | No                             |
 | Elimina               | Filas específicas o todas         | Siempre todas las filas        |
 | Velocidad             | Más lento (registro por registro) | Más rápido                     |
-| Se puede deshacer     | Sí (con transacciones)            | Depende del caso               |
 | Reinicia IDENTITY     | No                                | Sí                             |
 
 ```sql
@@ -342,28 +341,7 @@ WHERE Matricula = 'EST-010';
 SELECT * FROM [tabla] WHERE [condición];
 ```
 
-### 2. Usa transacciones para operaciones críticas
-
-Las transacciones permiten deshacer cambios si algo sale mal:
-
-```sql
--- Iniciar transacción
-BEGIN TRANSACTION;
-
--- Ejecutar el DELETE
-DELETE FROM Inscripcion
-WHERE Estado = 'Cancelada';
-
--- Si todo está bien, confirmar los cambios
-COMMIT;
-
--- Si algo salió mal, deshacer los cambios
--- ROLLBACK;
-```
-
-**Explicación sencilla:** Una transacción es como un "modo borrador". Haces los cambios, los revisas, y si están bien dices `COMMIT` (confirmar). Si algo no te gusta, dices `ROLLBACK` (deshacer) y todo vuelve a como estaba.
-
-### 3. Haz respaldos antes de operaciones masivas
+### 2. Haz respaldos antes de operaciones masivas
 
 Antes de hacer un UPDATE o DELETE que afecte muchos registros, respalda los datos:
 
@@ -376,7 +354,7 @@ FROM Inscripcion;
 -- Si algo sale mal, los datos están en Inscripcion_Respaldo
 ```
 
-### 4. Cuenta antes de eliminar
+### 3. Cuenta antes de eliminar
 
 ```sql
 -- ¿Cuántos registros voy a eliminar?
