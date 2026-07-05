@@ -1,176 +1,162 @@
 <div align="center">
-  <h1>🗄️ Bases de Datos Relacionales</h1>
-</div>
-
-## ¿Qué son las Bases de Datos?
-
-Una **base de datos** es un sistema organizado para almacenar, gestionar y recuperar información de manera estructurada y eficiente. Funciona como un **repositorio centralizado** donde se almacenan datos relacionados entre sí, representando algún aspecto del mundo real.
-
----
-
-### **Características Fundamentales**
-
-|       | **Característica**            | **Descripción**                                                                                               |
-| ----- | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **1** | **💾 Persistencia**           | Los datos se mantienen almacenados de forma permanente, más allá del tiempo de ejecución de las aplicaciones. |
-| **2** | **🏗️ Estructura Organizada**  | La información se organiza mediante modelos específicos que facilitan su acceso, manipulación y comprensión.  |
-| **3** | **⚙️ Gestión Centralizada**   | Permite el control unificado de la información, asegurando consistencia y evitando duplicidades.              |
-| **4** | **🛡️ Independencia de Datos** | Separa la forma en que se almacenan los datos de cómo los utilizan las aplicaciones.                          |
-| **5** | **🔐 Control de Acceso**      | Proporciona mecanismos de seguridad para regular quién puede ver o modificar qué información.                 |
-
----
-
-### ⭐ **Importancia en el Desarrollo de Software**
-
-Las bases de datos son componentes críticos porque:
-
-<div align="center">
-
-| **Beneficio**                                                                      | **Impacto**                   | **Icono** |
-| ---------------------------------------------------------------------------------- | ----------------------------- | --------- |
-| **Preservan información** de manera confiable y duradera                           | Historial completo disponible | 🗂️        |
-| **Permiten acceso concurrente** a múltiples usuarios sin comprometer la integridad | Escalabilidad garantizada     | 👥        |
-| **Establecen relaciones** entre diferentes tipos de información                    | Modelos complejos posibles    | 🔗        |
-| **Optimizan el espacio** mediante el diseño que evita redundancias                 | Eficiencia en almacenamiento  | 📦        |
-| **Facilitan la consistencia** mediante reglas de integridad                        | Calidad de datos asegurada    | ✅        |
-| **Posibilitan análisis** complejos sobre grandes volúmenes de datos                | Insights valiosos generados   | 📊        |
-
+  <h1>Bases de Datos Relacionales</h1>
+  <p><em>Curso práctico: desde el diseño conceptual hasta las operaciones CRUD</em></p>
 </div>
 
 ---
 
-## 🏛️ **Bases de Datos Relacionales: El Modelo Predominante**
+## Tabla de contenidos
 
-El **modelo relacional** es el paradigma más utilizado actualmente. Se basa en conceptos matemáticos de **teoría de conjuntos** y **lógica de predicados**.
-
-### 🔑 **Elementos Clave del Modelo Relacional**
-
-```plaintext
-┌─────────────────────────────────────────────────────────┐
-│                    BASE DE DATOS                        │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌──────────────┐       ┌──────────────┐                │
-│  │   TABLA 1    │       │   TABLA 2    │                │
-│  ├──────────────┤       ├──────────────┤                │
-│  │  • Columnas  │       │  • Columnas  │                │
-│  │  • Filas     │◄─────►│  • Filas     │                │
-│  │  • PK: ⭐    │       │  • PK: ⭐    │                │
-│  │  • FK: 🔗    │       │  • FK: 🔗    │                │
-│  └──────────────┘       └──────────────┘                │
-│           │                      │                      │
-│           └──────────────────────┘                      │
-│                    RELACIONES                           │
-└─────────────────────────────────────────────────────────┘
-```
-
-| Elemento                 | Símbolo | Descripción                                            | Ejemplo                    |
-| ------------------------ | ------- | ------------------------------------------------------ | -------------------------- |
-| **Tablas (Relaciones)**  | 📊      | Estructuras bidimensionales con filas y columnas       | `Estudiantes`, `Cursos`    |
-| **Filas (Tuplas)**       | 📝      | Representan registros individuales o instancias        | Un estudiante específico   |
-| **Columnas (Atributos)** | 🏷️      | Definen las propiedades o características de los datos | `Nombre`, `Edad`, `Email`  |
-| **Claves Primarias**     | 🔑      | Identificadores únicos para cada fila                  | `IdEstudiante`             |
-| **Claves Foráneas**      | 🔗      | Establecen relaciones entre tablas diferentes          | `IdCurso` en `Estudiantes` |
-| **Esquema**              | 🗺️      | Define la estructura de las tablas y sus relaciones    | Diagrama completo de BD    |
-
-### ✨ **Ventajas del Modelo Relacional**
-
-<div class="ventajas-grid">
-
-| Ventaja                   | Explicación                                        | Beneficio                      |
-| ------------------------- | -------------------------------------------------- | ------------------------------ |
-| **🧠 Intuitivo**          | La representación tabular es fácil de comprender   | Rápida curva de aprendizaje    |
-| **🎯 Flexible**           | Permite modelar diversas relaciones del mundo real | Adaptable a múltiples dominios |
-| **🌍 Estándar Universal** | Utiliza SQL (Structured Query Language)            | Portabilidad entre sistemas    |
-| **⚖️ Consistencia**       | Aplica restricciones de integridad                 | Datos confiables y precisos    |
-| **🏛️ Madurez**            | Más de 40 años de desarrollo y optimización        | Soluciones probadas y estables |
-
-</div>
+| #   | Clase                                                     | Tema                                  |
+| --- | --------------------------------------------------------- | ------------------------------------- |
+| 1   | [Diagramas ER](./modulo-01_Modelado/clase_01/)            | Modelado Entidad-Relación con draw.io |
+| 2   | [Transformación ER](./modulo-01_Modelado/clase-02_Trasformation/) | Del diagrama ER al esquema relacional |
+| 3   | [DDL en SQL Server](./modulo-01_Modelado/class_03/)       | Crear tablas en SQL Server            |
+| 4   | [Insertar datos](./modulo-02_SQL/clase_04_Insert/)        | INSERT INTO                           |
+| 5   | [Consultas básicas](./modulo-02_SQL/clase_05_Select/)     | SELECT, WHERE, ORDER BY               |
+| 6   | [Actualizar y eliminar](./modulo-02_SQL/clase_06_Update_Delete/) | UPDATE y DELETE                |
 
 ---
 
-## 🗣️ **SQL: El Lenguaje Estándar**
+## ¿Qué son las bases de datos?
 
-**SQL (Structured Query Language)** es el lenguaje utilizado para interactuar con bases de datos relacionales.
+Una **base de datos** es un sistema organizado para almacenar, gestionar y recuperar información de manera estructurada. Funciona como un **almacén centralizado** donde se guardan datos relacionados entre sí, representando algún aspecto del mundo real.
 
-### 🛠️ **¿Qué permite SQL?**
+**Ejemplo cotidiano:** Piensa en la lista de contactos de tu teléfono. Cada contacto tiene un nombre, un número y quizá un correo. Esa lista es una base de datos sencilla.
 
-<div align="center">
+---
 
-| **Operación**   | **Comando SQL** | **Icono** | **Propósito**                 |
-| --------------- | --------------- | --------- | ----------------------------- |
-| **Crear**       | `CREATE`        | 🏗️        | Estructuras de bases de datos |
-| **Insertar**    | `INSERT`        | 📥        | Agregar nuevos datos          |
-| **Modificar**   | `UPDATE`        | 🔄        | Actualizar datos existentes   |
-| **Eliminar**    | `DELETE`        | 🗑️        | Remover datos                 |
-| **Consultar**   | `SELECT`        | 🔍        | Recuperar información         |
-| **Administrar** | `GRANT/REVOKE`  | 👮        | Permisos y seguridad          |
+### Características fundamentales
 
-</div>
+| #   | Característica            | Descripción                                                                                                  |
+| --- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 1   | **Persistencia**          | Los datos se mantienen almacenados de forma permanente, más allá del tiempo de ejecución de las aplicaciones |
+| 2   | **Estructura organizada** | La información se organiza mediante modelos que facilitan su acceso y comprensión                            |
+| 3   | **Gestión centralizada**  | Permite el control unificado de la información, evitando duplicidades                                        |
+| 4   | **Independencia de datos** | Separa la forma en que se almacenan los datos de cómo los usan las aplicaciones                             |
+| 5   | **Control de acceso**     | Proporciona mecanismos de seguridad para regular quién puede ver o modificar la información                  |
 
-### 💻 **Ejemplo Básico de una Tabla Relacional**
+---
 
-_Nota: más adelante miraremos esto a más profundidad._
+### ¿Por qué son importantes?
+
+| Beneficio                                                           | Impacto                       |
+| ------------------------------------------------------------------- | ----------------------------- |
+| Preservan información de manera confiable y duradera                | Historial completo disponible |
+| Permiten acceso concurrente a múltiples usuarios sin perder datos   | Escalabilidad garantizada     |
+| Establecen relaciones entre diferentes tipos de información         | Modelos complejos posibles    |
+| Optimizan el espacio mediante diseño que evita redundancias         | Eficiencia en almacenamiento  |
+| Facilitan la consistencia mediante reglas de integridad             | Calidad de datos asegurada    |
+| Posibilitan análisis sobre grandes volúmenes de datos               | Información valiosa generada  |
+
+---
+
+## Bases de datos relacionales: el modelo predominante
+
+El **modelo relacional** es el más utilizado actualmente. Se basa en organizar los datos en **tablas** (filas y columnas), donde las tablas se conectan entre sí mediante **claves**.
+
+### Elementos clave
+
+![Elementos Clave](./elementos_clave.png)
+
+| Elemento                 | Descripción                                           | Ejemplo                    |
+| ------------------------ | ----------------------------------------------------- | -------------------------- |
+| **Tablas (Relaciones)**  | Estructuras con filas y columnas                      | `Estudiantes`, `Cursos`    |
+| **Filas (Tuplas)**       | Representan registros individuales                    | Un estudiante específico   |
+| **Columnas (Atributos)** | Definen las propiedades de los datos                  | `Nombre`, `Edad`, `Email`  |
+| **Claves Primarias**     | Identificadores únicos para cada fila                 | `IdEstudiante`             |
+| **Claves Foráneas**      | Establecen relaciones entre tablas                    | `IdCurso` en `Estudiantes` |
+| **Esquema**              | Define la estructura de las tablas y sus relaciones   | Diagrama completo de BD    |
+
+### Ventajas del modelo relacional
+
+| Ventaja               | Explicación                                       | Beneficio                      |
+| ---------------------- | ------------------------------------------------- | ------------------------------ |
+| **Intuitivo**          | La representación en tablas es fácil de entender  | Rápida curva de aprendizaje    |
+| **Flexible**           | Permite modelar diversas situaciones del mundo real | Adaptable a múltiples dominios |
+| **Estándar universal** | Utiliza SQL (Structured Query Language)           | Portabilidad entre sistemas    |
+| **Consistencia**       | Aplica restricciones de integridad                | Datos confiables y precisos    |
+| **Madurez**            | Más de 40 años de desarrollo y optimización       | Soluciones probadas y estables |
+
+---
+
+## SQL: el lenguaje estándar
+
+**SQL (Structured Query Language)** es el lenguaje que se usa para comunicarse con bases de datos relacionales. Con SQL puedes crear tablas, insertar datos, consultarlos, actualizarlos y eliminarlos.
+
+### ¿Qué permite SQL?
+
+| Operación     | Comando SQL    | Propósito                     |
+| ------------- | -------------- | ----------------------------- |
+| **Crear**     | `CREATE`       | Estructuras de bases de datos |
+| **Insertar**  | `INSERT`       | Agregar nuevos datos          |
+| **Modificar** | `UPDATE`       | Actualizar datos existentes   |
+| **Eliminar**  | `DELETE`       | Remover datos                 |
+| **Consultar** | `SELECT`       | Recuperar información         |
+
+### Ejemplo básico de una tabla relacional
+
+_Nota: más adelante veremos cada uno de estos comandos a profundidad._
 
 ```sql
--- 📋 CREACIÓN DE TABLA 'ESTUDIANTES'
+-- Creación de la tabla Estudiantes
 CREATE TABLE Estudiantes (
-    -- 🔑 CLAVE PRIMARIA (Identificador único)
+    -- Clave primaria (identificador único)
     IdEstudiante INT PRIMARY KEY,
 
-    -- 📝 ATRIBUTO CON RESTRICCIÓN 'NOT NULL'
+    -- Atributo obligatorio
     Nombre VARCHAR(50) NOT NULL,
 
-    -- 🔗 CLAVE FORÁNEA (Relación con tabla Cursos)
-    IdCurso INT,
+    -- Clave foránea (relación con tabla Cursos y estilo de definición en línea)
+    IdCurso INT FOREIGN KEY REFERENCES Cursos(IdCurso) ON DELETE CASCADE ON UPDATE CASCADE,
 
-    -- ⚙️ ATRIBUTO CON VALOR PREDETERMINADO
-    Estado BIT DEFAULT 1,
-
-    -- ↔️ DEFINICIÓN DE RELACIÓN
-    FOREIGN KEY (IdCurso) REFERENCES Cursos(IdCurso)
-    --    ↑           ↑              ↑          ↑
-    -- Tipo clave | Columna actual | Tabla | Columna referencia
+    -- Atributo con valor predeterminado
+    Estado BIT DEFAULT 1
 );
 ```
 
-**📌 Análisis de la estructura:**
+**Análisis de la estructura:**
 
-- `PRIMARY KEY` → Garantiza unicidad de cada registro
-- `NOT NULL` → Obliga a que el campo tenga valor
-- `FOREIGN KEY` → Establece relación con otra tabla
-- `REFERENCES` → Especifica la tabla y columna referenciada
+- `PRIMARY KEY` - Garantiza unicidad de cada registro
+- `NOT NULL` - Obliga a que el campo tenga valor
+- `FOREIGN KEY` - Establece relación con otra tabla
+- `REFERENCES` - Especifica la tabla y columna referenciada
+
+---
+
+## Ruta de aprendizaje y guía de archivos
+
+Para estudiar este curso de forma óptima, debes seguir la siguiente secuencia de carpetas y archivos en el orden indicado:
+
+```mermaid
+graph TD
+    A[1. Inicio: README.md general] --> B[2. modulo-01_Modelado/clase_01/README.md]
+    B --> C[3. modulo-01_Modelado/clase-02_Trasformation/README.md]
+    C --> D[4. modulo-01_Modelado/class_03/README.md]
+    D --> E[5. modulo-02_SQL/clase_04_Insert/README.md]
+    E --> F[6. modulo-02_SQL/clase_05_Select/README.md]
+    F --> G[7. modulo-02_SQL/clase_06_Update_Delete/README.md]
+
+    style A fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style G fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### Detalle del orden de lectura paso a paso:
+
+1. **[README.md (Raíz)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/README.md)**: Lee este archivo primero para comprender los conceptos teóricos iniciales de las bases de datos y el modelo relacional.
+2. **[clase_01/README.md (Diagramas ER)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-01_Modelado/clase_01/README.md)**: Aprende el modelado conceptual diseñando diagramas en draw.io.
+3. **[clase-02_Trasformation/README.md (Transformación)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-01_Modelado/clase-02_Trasformation/README.md)**: Revisa las reglas para pasar del diseño gráfico a un esquema lógico relacional (tablas).
+4. **[class_03/README.md (DDL)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-01_Modelado/class_03/README.md)**: Comienza a programar en SQL Server creando la base de datos y sus tablas relacionales.
+5. **[clase_04_Insert/README.md (INSERT)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-02_SQL/clase_04_Insert/README.md)**: Inserta tus primeros registros siguiendo la jerarquía y restricciones de llaves foráneas.
+6. **[clase_05_Select/README.md (SELECT)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-02_SQL/clase_05_Select/README.md)**: Realiza tus primeras consultas de lectura aplicando ordenamientos y filtros.
+7. **[clase_06_Update_Delete/README.md (UPDATE/DELETE)](file:///c:/Users/Walter_Jiron/Documents/Proyectos/Learn_DB/modulo-02_SQL/clase_06_Update_Delete/README.md)**: Concluye completando el ciclo CRUD básico aprendiendo a modificar y borrar registros de forma controlada.
 
 ---
 
-## 🚀 **Próximos Pasos en el Curso**
-
-A lo largo del curso, exploraremos los siguientes temas fundamentales:
-
-<div class="roadmap">
-
-### 📈 **Ruta de Aprendizaje**
-
-| #     | **Módulo**                                                      | **Descripción**                         |
-| ----- | --------------------------------------------------------------- | --------------------------------------- |
-| **1** | **Diseño de bases de datos** mediante modelado entidad-relación | Diagramas ER y normalización conceptual |
-| **2** | **Normalización** para evitar redundancias                      | Formas normales (1FN, 2FN, 3FN)         |
-| **3** | **Consultas SQL básicas y avanzadas**                           | SELECT, JOINs, subconsultas, funciones  |
-| **4** | **Transacciones y control de concurrencia**                     | ACID, bloqueos, niveles de aislamiento  |
-| **5** | **Optimización de consultas**                                   | Índices, planes de ejecución, tuning    |
-| **6** | **Diseño de esquemas eficientes**                               | Patrones y anti-patrones de diseño      |
-
-</div>
-
----
 
 <div align="center">
 
-### 🎓 **¿Listo para comenzar?**
-
-_Este material forma la base fundamental para tu viaje en el mundo de las bases de datos._  
-**💡 Tip:** Practica cada concepto con ejemplos reales para una mejor comprensión.
+_Este material cubre los fundamentos para trabajar con bases de datos relacionales._
+**Tip:** Practica cada concepto con ejemplos reales para una mejor comprensión.
 
 </div>
-
----
